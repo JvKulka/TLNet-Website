@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2, Zap, Brain, FileText, Building2, Heart, BookOpen } from "lucide-react";
+import { ArrowRight, CheckCircle2, Zap, Brain, FileText, Building2, Heart, BookOpen, MapPin, Mail, Phone } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Logo } from "@/components/Logo";
 
 /**
  * Design Philosophy: Minimalismo Corporativo Moderno com Acentos Verdes
@@ -31,10 +32,7 @@ export default function Home() {
       >
         <nav className="container flex items-center justify-between py-4">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-green-600 to-green-700 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">T</span>
-            </div>
-            <span className="font-bold text-xl text-gray-900">TLNET</span>
+            <Logo width={120} height={50} />
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a href="#sobre" className="text-gray-700 hover:text-green-700 transition-colors">
@@ -480,10 +478,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold">T</span>
-                </div>
-                <span className="font-bold text-white">TLNET</span>
+                <Logo width={100} height={40} variant="light" />
               </div>
               <p className="text-sm text-gray-400">
                 Automação de processos e inteligência artificial para transformação digital.
@@ -511,8 +506,22 @@ export default function Home() {
             <div>
               <h4 className="font-semibold text-white mb-4">Contato</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="mailto:contato@tlnet.com.br" className="hover:text-green-400 transition-colors">contato@tlnet.com.br</a></li>
-                <li><a href="tel:+55" className="hover:text-green-400 transition-colors">+55 (31) 98306-3031</a></li>
+                <li className="flex items-start gap-2">
+                  <MapPin className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-300">
+                    Av. João Pinheiro, 274 - Sala 202<br />
+                    Bairro Lourdes - Belo Horizonte - MG<br />
+                    CEP. 30.130-186
+                  </span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Mail className="w-4 h-4 text-green-400 flex-shrink-0" />
+                  <a href="mailto:contato@tlnet.com.br" className="hover:text-green-400 transition-colors text-gray-300">contato@tlnet.com.br</a>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Phone className="w-4 h-4 text-green-400 flex-shrink-0" />
+                  <a href="tel:+55" className="hover:text-green-400 transition-colors text-gray-300">+55 (31) 98306-3031</a>
+                </li>
               </ul>
             </div>
           </div>
